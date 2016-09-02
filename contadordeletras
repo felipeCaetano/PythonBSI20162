@@ -1,0 +1,8 @@
+dicionario={}
+entrada=input("Digite uma frase: ")
+for letra in entrada:
+    if letra in dicionario:
+        dicionario[letra] += 1
+    else:
+        dicionario[letra]=1
+print (dicionario)
