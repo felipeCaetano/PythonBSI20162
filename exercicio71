@@ -1,0 +1,12 @@
+'''
+Introdução a programação com Python
+Cap. 7 - Exercicio 7.1
+'''
+
+primeiraString=input()
+segundaString=input()
+
+p=primeiraString.find(segundaString)
+
+if p>-1:
+	print(segundaString,"encontrado na posição %d de" % p,primeiraString )
