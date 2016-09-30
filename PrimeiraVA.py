@@ -64,39 +64,39 @@ if A>1 or B>1 or C>1:								#não deve haver divisão por zero na função vots
 	print("Candidato %s: %f%% dos votos." % (segundo,votossegundo))
 	print("Candidato %s: %f%% dos votos." % (terceiro,votosterceiro))
 	
-	#3ª questão - Lista de Passageiros
+#3ª questão - Lista de Passageiros
 	
-	#Dados:
-	passageirosVoo=["João Guilherme", "Allan Vieira", "José Marcos","Pedro Cavalcanti"]
-	embarcados=["João Guilherme", "Allan Vieira","Pedro Cavalcanti","Allan Vieira"]
-	maisdeuma=[]
-	for nome in passageirosVoo:
-		if nome not in embarcados:
-			print(nome,"não embarcou")
-	for nome in embarcados:
-		if nome not in maisdeuma and embarcados.count(nome)>1:
-			maisdeuma.append(nome)
-			print(nome,"está repetido")
+#Dados:
+passageirosVoo=["João Guilherme", "Allan Vieira", "José Marcos","Pedro Cavalcanti"]
+embarcados=["João Guilherme", "Allan Vieira","Pedro Cavalcanti","Allan Vieira"]
+maisdeuma=[]
+for nome in passageirosVoo:
+	if nome not in embarcados:
+		print(nome,"não embarcou")
+for nome in embarcados:
+	if nome not in maisdeuma and embarcados.count(nome)>1:
+		maisdeuma.append(nome)
+		print(nome,"está repet	ido")	
 			
-	#4ª questão -  Buscas:
+#4ª questão -  Buscas:
 	
-	def buscaSqn(valor,lista):
-		for n in range(len(lista)):
-			if lista[n]==valor:
-				return n
-		return -1
+def buscaSqn(valor,lista):
+	for n in range(len(lista)):
+		if lista[n]==valor:
+			return n
+	return -1
 	
-	def buscaBnr(valor,lista):
-		inicio=0
-		fim = len(lista)
-		while inicio<=fim:
-			meio=(inicio + fim)//2
-			if lista[meio]<valor:
-				inicio=meio+1
-			elif lista[meio]>valor:
-				fim=meio-1
-			else:
-				return meio
+def buscaBnr(valor,lista):
+	inicio=0
+	fim = len(lista)
+	while inicio<=fim:
+		meio=(inicio + fim)//2
+		if lista[meio]<valor:
+			inicio=meio+1
+		elif lista[meio]>valor:
+			fim=meio-1
+		else:
+			return meio
 			
 lista=[2,3,12,15,25,32,45,56,67,74,83,90]
 print(buscaSqn(25,lista))
